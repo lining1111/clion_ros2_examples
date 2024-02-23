@@ -1,0 +1,23 @@
+[1.127s] Invoking command in '/home/lining/work/dl2ros2/chapt3/chapt3_ws/build/example_topic_rclcpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/lining/work/dl2ros2/chapt3/chapt3_ws/build/example_topic_rclcpp -- -j1 -l1
+[1.177s] ninja: no work to do.
+[1.202s] Invoked command in '/home/lining/work/dl2ros2/chapt3/chapt3_ws/build/example_topic_rclcpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/lining/work/dl2ros2/chapt3/chapt3_ws/build/example_topic_rclcpp -- -j1 -l1
+[1.462s] Invoking command in '/home/lining/work/dl2ros2/chapt3/chapt3_ws/build/example_topic_rclcpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/lining/work/dl2ros2/chapt3/chapt3_ws/build/example_topic_rclcpp
+[1.491s] -- Install configuration: ""
+[1.493s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/lib/example_topic_rclcpp/topic_subscribe_01
+[1.495s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/lib/example_topic_rclcpp/topic_publisher_01
+[1.496s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/ament_index/resource_index/package_run_dependencies/example_topic_rclcpp
+[1.496s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/ament_index/resource_index/parent_prefix_path/example_topic_rclcpp
+[1.497s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/example_topic_rclcpp/environment/ament_prefix_path.sh
+[1.498s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/example_topic_rclcpp/environment/ament_prefix_path.dsv
+[1.499s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/example_topic_rclcpp/environment/path.sh
+[1.499s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/example_topic_rclcpp/environment/path.dsv
+[1.500s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/example_topic_rclcpp/local_setup.bash
+[1.501s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/example_topic_rclcpp/local_setup.sh
+[1.501s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/example_topic_rclcpp/local_setup.zsh
+[1.502s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/example_topic_rclcpp/local_setup.dsv
+[1.503s] -- Installing: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/example_topic_rclcpp/package.dsv
+[1.504s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/ament_index/resource_index/packages/example_topic_rclcpp
+[1.505s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/example_topic_rclcpp/cmake/example_topic_rclcppConfig.cmake
+[1.505s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/example_topic_rclcpp/cmake/example_topic_rclcppConfig-version.cmake
+[1.506s] -- Up-to-date: /home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp/share/example_topic_rclcpp/package.xml
+[1.511s] Invoked command in '/home/lining/work/dl2ros2/chapt3/chapt3_ws/build/example_topic_rclcpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/lining/work/dl2ros2/chapt3/chapt3_ws/build/example_topic_rclcpp

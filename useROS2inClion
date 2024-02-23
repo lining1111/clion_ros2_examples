@@ -1,0 +1,43 @@
+该步骤主要参考https://www.jetbrains.com.cn/en-us/help/clion/ros2-tutorial.html
+辅助参考 https://blog.csdn.net/weixin_37834269/article/details/132282219?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-132282219-blog-126468697.235%5Ev43%5Epc_blog_bottom_relevance_base2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-132282219-blog-126468697.235%5Ev43%5Epc_blog_bottom_relevance_base2&utm_relevant_index=3
+
+1、首先应该有一个较为完整的ros2的工程存在，新建工程的话，参考 鱼香ros博客，
+ros2 pkg create example_topic_rclcpp --build-type ament_cmake --dependencies rclcpp ##其中example_topic_rclcpp为包名称
+工程的目录结构为
+-xx_ws(工程顶级目录)
+--src(自建目录，同时在这个目录下执行 ros2 pkg来新建工程)
+2、在已有ros2工程的基础上，参考文章开头的链接内容，开始后续操作。在xx_ws目录下执行
+colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G Ninja
+完成cmake环境依赖，执行完毕后，最主要的是在xx_ws目录下与src同级上，会有install和build目录出现，同时最重要的是build目录下会有compile_commands.json
+-xx_ws
+--src
+--install
+--build
+3、在xx_ws目录下打开终端,在终端执行 source install/setup.bat，此时在此终端下操作才会有该工程的ros2环境设置，主要涉及到cmake编译和调试程序(调试程序，主要是程序运行时一些ros2库的运行时加载问题)
+4、在3中打开的终端中启动clion，打开build/compile_commands.json作为工程打开，
+5、改变工程的跟目录 clion中Tools | Compilation Database | Change Project Root 选择xx_ws作为工程根目录
+6、在xx_ws/src/example_topic_rclcpp/下新建cmake_commands.sh，输入下面内容
+#!/bin/sh
+/usr/bin/cmake  /home/lining/work/dl2ros2/chapt3/chapt3_ws/src/example_topic_rclcpp  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G Ninja -DCMAKE_INSTALL_PREFIX=/home/lining/work/dl2ros2/chapt3/chapt3_ws/install/example_topic_rclcpp
+/usr/bin/cmake --build   /home/lining/work/dl2ros2/chapt3/chapt3_ws/build/example_topic_rclcpp -- -j8 -l8
+/usr/bin/cmake --install /home/lining/work/dl2ros2/chapt3/chapt3_ws/build/example_topic_rclcpp
+保存，并增加可执行权限(其中，一些目录路径的编写应该与实际工程目录相符)
+7、使用 clion 的 external tool 配置 colcon build
+在clion中的Settings | Tools | External Tools 使用 + 添加一个新的 external tool
+Name 随意写比如 colcon build
+Program colcon
+Arguments build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G Ninja
+Working directionary /home/lining/work/dl2ros2/chapt3/chapt3_ws
+保存
+8、Create a custom build target clion中 Settings | Build, Execution, Deployment | Custom Build Targets and click + add to add a new target。
+Name 随意比如 CMake_commands
+Build 点击...后弹出External Tools选择+新建
+	Name 随意比如CMake commands script
+	Program 选择6中新建cmake_commands.sh
+	Working directionary /home/lining/work/dl2ros2/chapt3/chapt3_ws/build/example_topic_rclcpp #(很重要一定要选对)
+保存
+9、编译调试某个节点程序 在clion中run | debug configuration 选择 Custom Build Application配置好
+Name 随意
+Target 选择8中新建的External Tools
+Executable 选择对应的程序
+10、剩下的就可以愉快的调试程序了，切记运行程序，一定要有3的操作，来完成该工程的ros2的环境配置
