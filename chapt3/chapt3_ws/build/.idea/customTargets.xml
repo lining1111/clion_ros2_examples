@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CLionExternalBuildManager">
-    <target id="77f2627b-2ca7-4a9a-af58-7dde00f54925" name="CMake_commands" defaultType="TOOL">
-      <configuration id="a40be4b3-3c17-4c14-9558-6a019ab03425" name="CMake_commands">
+    <target id="83f0b343-8abc-4ae6-bae0-59cf08a08c2e" name="CMake_commands" defaultType="TOOL">
+      <configuration id="079a273e-2b74-48f5-a2c7-58782379e667" name="CMake_commands">
         <build type="TOOL">
           <tool actionId="Tool_External Tools_CMake commands script" />
         </build>
